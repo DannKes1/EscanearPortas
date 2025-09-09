@@ -55,7 +55,7 @@ Devido à natureza da varredura de rede (criação de *raw sockets*), o script *
 
 2.  Execute o seguinte comando:
     ```bash
-    sudo python3 scanner_gui.py
+    sudo python3 scanner.py
     ```
 
 3.  Digite sua senha de usuário quando solicitado.
