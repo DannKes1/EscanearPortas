@@ -51,7 +51,7 @@ pip3 install scapy
 
 Devido à natureza da varredura de rede (criação de *raw sockets*), o script **precisa ser executado com privilégios de administrador (root)**.
 
-1.  Abra o terminal no diretório onde o arquivo `scanner_gui.py` está localizado.
+1.  Abra o terminal no diretório onde o arquivo `scanner.py` está localizado.
 
 2.  Execute o seguinte comando:
     ```bash
