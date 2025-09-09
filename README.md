@@ -1,6 +1,7 @@
 # Ferramenta de Varredura de Portas (Port Scanner) com GUI
+<img width="1281" height="799" alt="image" src="https://github.com/user-attachments/assets/a9f0aab3-141b-4558-af1f-96f0bce6bc89" />
 
-![Exemplo da Interface Gráfica](https://i.imgur.com/URLgY2m.png )
+
 
 ## 🎯 Objetivo do Projeto
 
