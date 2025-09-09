@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
@@ -10,11 +10,11 @@ from scapy.all import sr1, IP, TCP, UDP, ICMP, conf
 import logging
 from typing import List, Set, Tuple
 
-# --- Configurações do Scapy e Logging ---
+
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 conf.verb = 0
 
-# --- Lógica de Varredura (a mesma de antes, mas adaptada para a GUI) ---
+
 
 def parse_ports(port_str: str) -> List[int]:
     ports: Set[int] = set()
@@ -62,7 +62,7 @@ def udp_scan(target_ip: str, port: int) -> str:
     except Exception:
         return "ERRO"
 
-# --- Classe da Aplicação Gráfica ---
+
 
 class PortScannerApp:
     def __init__(self, root):
@@ -88,17 +88,17 @@ class PortScannerApp:
         self.ports_entry.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
         self.ports_entry.insert(0, "1-1024") # Portas de exemplo
 
-        # Checkboxes para tipo de scan
+      
         self.tcp_var = tk.BooleanVar(value=True)
         self.udp_var = tk.BooleanVar(value=False)
         ttk.Checkbutton(input_frame, text="TCP", variable=self.tcp_var).grid(row=2, column=0, padx=5, pady=5, sticky="w")
         ttk.Checkbutton(input_frame, text="UDP", variable=self.udp_var).grid(row=2, column=1, padx=5, pady=5, sticky="w")
 
-        # Botão de Scan
+     
         self.scan_button = ttk.Button(main_frame, text="Iniciar Varredura", command=self.start_scan_thread)
         self.scan_button.pack(pady=10, fill=tk.X)
 
-        # --- Área de Resultados ---
+     
         output_frame = ttk.LabelFrame(main_frame, text="Resultados", padding="10")
         output_frame.pack(fill=tk.BOTH, expand=True)
         
@@ -199,3 +199,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = PortScannerApp(root)
     root.mainloop()
+
